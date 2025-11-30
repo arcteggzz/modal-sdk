@@ -38,14 +38,17 @@
         cvv: document.getElementById("cvv").value,
       };
 
-      const res = await fetch(options.apiUrl, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(payload),
-      });
+      // const res = await fetch(options.apiUrl, {
+      //   method: "POST",
+      //   headers: { "Content-Type": "application/json" },
+      //   body: JSON.stringify(payload),
+      // });
 
-      const json = await res.json();
-      alert(json.message);
+      // const json = await res.json();
+      // alert(json.message);
+
+      // alert(payload); // Placeholder for actual payment processing
+      alert("Payment processed for " + payload.amount);
 
       modal.remove();
     };
